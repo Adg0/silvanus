@@ -1,6 +1,6 @@
 #  Silvanus NFT gaming
 
-***NOTE***: *This is a proof of concept, not be used in production environment.*
+:warning: *This is a proof of concept, not to be used in production environment.*
 
 ## Summary
 
