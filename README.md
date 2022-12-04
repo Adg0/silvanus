@@ -1,4 +1,4 @@
-#  Silvanus NFT gaming
+# :deciduous_tree: Silvanus NFT gaming
 
 :warning: *This is a proof of concept, not to be used in production environment.*
 
