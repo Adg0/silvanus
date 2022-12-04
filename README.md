@@ -1,4 +1,4 @@
-# Silvanus NFT gaming
+#  Silvanus NFT gaming
 
 **NOTE**: This is a proof of concept, not be used in production environment.
 
@@ -14,7 +14,7 @@ The core feature of the game is to promote forestation and pioneer smt...
 
 The goal is, by harnessing the power of free markets to aggregate collective knowledge and provide the general public with an unbiased source of truth in regards to the likelihood of certain significant events happening in the future.
 
-[img](https://imgur.com/QJ4Rtv4.png)
+![icon](https://imgur.com/QJ4Rtv4.png)
 
 [![Silvanus](https://imgur.com/0h5eKZs.png)](https://youtu.be/video "Silvanus")
 
