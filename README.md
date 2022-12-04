@@ -4,17 +4,17 @@
 
 ## Summary
 
-Silvanus is an NFT gaming completely decentralized and on chain.
+Silvanus is an `on-chain` dynamic NFT game.
 
 Players water the seedling NFTs to grow them into a tree.
 
-Players race to grow their seedling before the tree NFT dies when wild fire or flood happens.
+Players race to grow their seedling before the tree NFT dies when flood happens. And wild fire decreasing health of Tree.
 
 The core feature of the game is to promote forestation and pioneer smt...
 
 The goal is, by harnessing the power of free markets to aggregate collective knowledge and provide the general public with an unbiased source of truth in regards to the likelihood of certain significant events happening in the future.
 
-[![Silvanus](https://imgur.com/0h5eKZs.png)](https://youtu.be/video "Silvanus")
+[![Silvanus](https://imgur.com/pmMPeI6.png)](https://youtu.be/video "Silvanus")
 
 [Project Slides Deck](https://docs.google.com/presentation/d/...)
 
