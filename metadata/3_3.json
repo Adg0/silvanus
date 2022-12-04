@@ -1,0 +1,25 @@
+{
+	"name": "Silvanus Trees #3",
+	"description": "Seedling to tree collection.",
+	"image": "https://ipfs.io/ipfs/QmQu2Hdyo5bxYxtYdK5F812K5DBqTKpR72uyJRKP1ReeoR/3_3.png",
+	"edition": 3,
+	"date": 1670057430213,
+	"attributes": [
+		{
+			"trait_type": "Trunk",
+			"value": "Trunk"
+		},
+		{
+			"trait_type": "Bud",
+			"value": "No_Bud"
+		},
+		{
+			"trait_type": "Leafs",
+			"value": "Green"
+		},
+		{
+			"trait_type": "Life",
+			"value": true
+		}
+	]
+}
