@@ -14,9 +14,9 @@ The core feature of the game is to promote forestation and pioneer smt...
 
 The goal is, by harnessing the power of free markets to aggregate collective knowledge and provide the general public with an unbiased source of truth in regards to the likelihood of certain significant events happening in the future.
 
-![](https://imgur.com/0h5eKZs)
+[img](https://imgur.com/QJ4Rtv4)
 
-[![Silvanus](https://imgur.com/QJ4Rtv4)](https://youtu.be/video "Silvanus")
+[![Silvanus](https://imgur.com/0h5eKZs)](https://youtu.be/video "Silvanus")
 
 [Project Slides Deck](https://docs.google.com/presentation/d/...)
 
