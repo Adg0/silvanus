@@ -12,7 +12,7 @@ Players race to grow their seedling before the tree NFT dies from `flood` or `wi
 
 The goal of the game is to promote forestation and bring people together.
 
-[![Silvanus](https://imgur.com/pmMPeI6.png)](https://youtu.be/video "Silvanus")
+[![Silvanus](https://imgur.com/pmMPeI6.png)](https://youtu.be/DHCMM8Xy254 "Silvanus")
 
 [Live Demo for Optimisim Goerli](https://rectangular-sedate-anger.glitch.me/)
 
