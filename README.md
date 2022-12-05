@@ -14,6 +14,8 @@ The goal of the game is to promote forestation and bring people together.
 
 [![Silvanus](https://imgur.com/pmMPeI6.png)](https://youtu.be/DHCMM8Xy254 "Silvanus")
 
+[Demo Video](https://youtu.be/DHCMM8Xy254 "Silvanus")
+
 [Live Demo for Optimisim Goerli](https://rectangular-sedate-anger.glitch.me/)
 
 [NFT drop on NiftyKit](https://app.niftykit.com/drops/pre-silvanus)
@@ -21,7 +23,7 @@ The goal of the game is to promote forestation and bring people together.
 We wrote contract for dynamic NFT with the help of openzepplen and NiftyKit.
 
 The front end application is written with vite and generated from unity.
-The repository for the Front-End is avalaible here: https://github.com/...
+The repository for the Front-End is avalaible here: https://github.com/adapole/silvanus-frontend
 
 ## Overview
 
