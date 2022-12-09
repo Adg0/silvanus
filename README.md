@@ -23,13 +23,13 @@ The goal of the game is to promote forestation and bring people together.
 We wrote contract for dynamic NFT with the help of openzepplen and NiftyKit.
 
 The front end application is written with vite and generated from unity.
-The repository for the Front-End is avalaible here: https://github.com/adapole/silvanus-frontend
+The repository for the Front-End is available here: https://github.com/adapole/silvanus-frontend
 
 ## Overview
 
 Multiplayer mode is the major focus of our build, to bring people together we must provide a media of communication.
 
-A voip voice communication channel is built into the game so anyone in the room can talk with eachother.
+A voip voice communication channel is built into the game so anyone in the room can talk with each-other.
 
 And a support for almost all modern hardware devices, from VR & AR devices to smart-phones and PC widens the reach of our game.
 
@@ -40,13 +40,13 @@ Water the seedling with `H2O` token consistently until it becomes a tree.
 
 Some events are triggered by game master, like `Rain` and `Wild fire`.
 
-Rain supplies all silvanus NFT holders with water token(H2O) and on occassion it causes `Flood` for small seedlings.
+Rain supplies all silvanus NFT holders with water token(H2O) and on occasion it causes `Flood` for small seedlings.
 
 `Wild Fire` is also started by game master to level the playing field so seedlings get a chance to grow and compete with bigger trees.
 
 Floods destroy the seedlings but you get a water token airdrop nonetheless.
 
-To survive wild fire event, pledge water for fire exthanguishing; that is `approve` spending to contract to drain water incase a fire happens.
+To survive wild fire event, pledge water for fire extinguishing; that is `approve` spending to contract to drain water incase a fire happens.
 
 So `Pray` for protection from `Flood` and `Fire` at the temple.
 Or use some `Magic Potion` NFT to revive your tree if it dies.
