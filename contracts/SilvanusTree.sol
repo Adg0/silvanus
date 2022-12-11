@@ -60,6 +60,7 @@ contract SilvanusTree is ERC721URIStorage, Ownable {
         Tree memory newTree = Tree(_name,newItemId,randDna,1,randRarity,true);
         trees.push(newTree);
         _safeMint(msg.sender, newItemId);
+        WaterToken(_H2Otoken).mint(msg.sender, 1000 * 10 ** 18);
         bytes memory _uri = bytes(_imageURL);
         uint8 _image = randRarity % 6;
         if(_image == 0) {
