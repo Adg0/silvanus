@@ -99,39 +99,7 @@ contract SilvanusTree is ERC721URIStorage, Ownable {
     event WaterTree(address from, uint256 tokenId);
     event Rain(uint256 volume);
 
-    function startWildFire(uint256 _tokenId, uint256 _damage) public onlyOwner {
-        for (uint256 i = _tokenId; i > 0; i--){
-           uint256 _allowance = IERC20(_H2Otoken).allowance(ownerOf(i),address(this));
-           uint256 _balance = IERC20(_H2Otoken).balanceOf(ownerOf(i));
-           uint256 _volume = (_allowance <= _balance) ? _allowance : _balance;
-           uint256 _withdraw = 0;
-           bool safe = true;
-           if(_volume >= _damage){
-               _withdraw = _damage;
-           } else {
-               _withdraw = _volume;
-                safe = false;
-           }
-            IERC20(_H2Otoken).safeTransferFrom(ownerOf(i),address(this),_withdraw);
-            _updateTree(i,safe);
-        }
-        // emit
-        emit WildFire(_tokenId,_damage);
-    }
-
-    function waterTree(uint256 _tokenId,uint256 _volume) public {
-        IERC20(_H2Otoken).safeTransferFrom(msg.sender,address(this),_volume);
-        _updateTree(_tokenId,true);
-        // emit watering event
-        emit WaterTree(msg.sender, _tokenId);
-    }
-
-    function startRain(uint256 _volume) public onlyOwner {
-        _rain(_volume);
-        // emit rain event 
-        emit Rain(_volume);     
-    }
-
+	// Updaters
     function _updateTree(uint256 _tokenId, bool _increase) internal{
         Tree storage tree = trees[_tokenId];
         if(_increase){
@@ -165,11 +133,10 @@ contract SilvanusTree is ERC721URIStorage, Ownable {
 
     function _rain(uint256 _volume) internal{
         uint256 tokens = _tokenIds.current();
-        WaterToken(_H2Otoken).rain(_volume*tokens);
         bool flooding = false;
         uint256 flood = _createRandomNum(tokens);
         for (uint256 i = 0; i < tokens; i++){
-           IERC20(_H2Otoken).safeTransfer(ownerOf(i),_volume);
+           WaterToken(_H2Otoken).mint(ownerOf(i),_volume);
            // Update level for all trees
            if(i >= flood) {
                flooding = true;
@@ -179,14 +146,52 @@ contract SilvanusTree is ERC721URIStorage, Ownable {
         }
     }
 
-    function updateH2Oaddress(address _newAddress) public onlyOwner {
-        _H2Otoken = _newAddress;
+	// Rain: Airdrop `_volume` to all tree NFT owners
+    function startRain(uint256 _volume) public onlyOwner {
+        _rain(_volume);
+        // emit rain event 
+        emit Rain(_volume);     
     }
 
+	// Wild Fire: decreases level of trees older than `_tokenId`
+	// If tree owner has allowed H2O to be transfered to this contract then the tree is safe
+    function startWildFire(uint256 _tokenId, uint256 _damage) public onlyOwner {
+        for (uint256 i = _tokenId; i > 0; i--){
+           uint256 _allowance = IERC20(_H2Otoken).allowance(ownerOf(i),address(this));
+           uint256 _balance = IERC20(_H2Otoken).balanceOf(ownerOf(i));
+           uint256 _volume = (_allowance <= _balance) ? _allowance : _balance;
+           uint256 _withdraw = 0;
+           bool safe = true;
+           if(_volume >= _damage){
+               _withdraw = _damage;
+           } else {
+               _withdraw = _volume;
+                safe = false;
+           }
+            IERC20(_H2Otoken).safeTransferFrom(ownerOf(i),address(this),_withdraw);
+            _updateTree(i,safe);
+        }
+        // emit
+        emit WildFire(_tokenId,_damage);
+    }
+
+	// Water tree: Levels up the tree
+    function waterTree(uint256 _tokenId,uint256 _volume) public {
+        IERC20(_H2Otoken).safeTransferFrom(msg.sender,address(this),_volume);
+        _updateTree(_tokenId,true);
+        // emit watering event
+        emit WaterTree(msg.sender, _tokenId);
+    }
+
+	// Revive dead tree or upgrade tree level double amount
     function applyPotion(uint256 _tokenId, uint256 _usePower) public {
         Tree storage tree = trees[_tokenId];
         tree.level += uint8(_usePower*2);
         tree.life = true;
         _updateImage(_tokenId, tree.level, tree.life);
+    }
+
+    function updateH2Oaddress(address _newAddress) public onlyOwner {
+        _H2Otoken = _newAddress;
     }
 }
